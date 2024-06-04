@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void loadCountries() {
-        CountryService countryService = new CountryService();
+        CountryService countryService = new CountryService(this);
         countryService.getCountries(new CountryService.CountryListener() {
             @Override
             public void onCountriesReceived(ArrayList<Country> countries) {
